@@ -19,10 +19,11 @@
     "sucrase": "^3.35.0"
   },
 "scripts": {
-  "build": "npx sucrase ./src --transforms imports --out-dir ./dist",
+  "build": "chmod +x ./node_modules/.bin/sucrase && npx sucrase ./src --transforms imports --out-dir ./dist",
   "dev": "nodemon --exec npx sucrase-node ./src/server.js",
   "start": "npm run build && node ./dist/server.js"
 }
+
 
 
   
