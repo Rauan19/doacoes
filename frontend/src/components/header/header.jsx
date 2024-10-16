@@ -21,7 +21,7 @@ export const Header = () => {
     localStorage.removeItem("doacao"); // Remove o token do localStorage
     setIsLoggedIn(false); // Atualiza o estado de login
     navigate("/login"); // Redireciona para a página de login
-    window.location.reload(); // Recarrega a página
+; // Recarrega a página
   };
 
   const handleLogin = () => {
