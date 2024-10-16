@@ -9,7 +9,9 @@ export const Header = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("doacao"); // Remove o token do localStorage
-    navigate("/login"); // Redireciona para a página de login
+    setTimeout(() => {
+      navigate("/login"); // Redireciona para a página de login
+    }, 100); // Atraso de 100 ms antes do redirecionamento
   };
 
   const handleLogin = () => {
@@ -44,11 +46,9 @@ export const Header = () => {
         <p onClick={handleMinhasDoacoes}>Minhas Doações</p>
         <p onClick={handleMinhasCampanhas}>Minhas Campanhas</p>
         {isLoggedIn() ? (
-          <>
-            <h2 onClick={handleLogout}>
-              <FaRegUserCircle /> Sair
-            </h2>
-          </>
+          <h2 onClick={handleLogout}>
+            <FaRegUserCircle /> Sair
+          </h2>
         ) : (
           <h2 onClick={handleLogin}>
             <FaRegUserCircle /> Login

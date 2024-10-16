@@ -102,7 +102,7 @@ const Login = () => {
           <StyledCardFooter>
             <p>
               Não tem uma conta?{' '}
-              <Link to="/registro">Registre-se</Link>
+              <a href="/registro">Registre-se</a>
             </p>
           </StyledCardFooter>
         </StyledCard>
