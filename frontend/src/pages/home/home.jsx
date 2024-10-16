@@ -86,6 +86,13 @@ export const PageHome = () => {
     setModalDetalhesOpen(true);
   };
 
+  const IrparaCriarCampanha = () => {
+    if(!session?.token) {
+      navigate("/login")
+    }
+    navigate("/criarcampanha")
+  }
+
   const fecharModal = () => {
     setModalOpen(false);
     setSelectedCampanha(null);
@@ -157,7 +164,7 @@ export const PageHome = () => {
           <Frase>
             <h1>Bem-vindo ao DoeAqui</h1>
             <p>Faça a diferença hoje! Doe para causas que importam.</p>
-            <button onClick={() => navigate("/criarcampanha")}>Criar Campanha</button>
+            <button onClick={IrparaCriarCampanha}>Criar Campanha</button>
           </Frase>
 
           <ContainerCampanha>
