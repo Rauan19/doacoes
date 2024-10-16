@@ -18,10 +18,11 @@
     "nodemon": "^3.1.7",
     "sucrase": "^3.35.0"
   },
-  "scripts": {
-    "build": "sucrase ./src --transforms imports --out-dir ./dist",
-    "dev": "nodemon --exec sucrase-node ./src/server.js",
-    "start": "npm run build && node ./dist/server.js"
-  }
+ "scripts": {
+  "build": "./node_modules/.bin/sucrase ./src --transforms imports --out-dir ./dist",
+  "dev": "nodemon --exec sucrase-node ./src/server.js",
+  "start": "npm run build && node ./dist/server.js"
+}
+
   
 }
