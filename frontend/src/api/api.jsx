@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Crie uma instância do Axios
 const api = axios.create({
-  baseURL: 'http://localhost:4005', // Substitua pelo caminho correto da sua API
+  baseURL: 'https://doacoes.onrender.com', // Substitua pelo caminho correto da sua API
 });
 
 

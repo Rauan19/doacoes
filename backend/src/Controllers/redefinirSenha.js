@@ -32,7 +32,7 @@ export const enviarEmailRedefinicao = async (req, res) => {
     });
 
     // Criar o link de redefinição de senha
-    const link = `http://localhost:5173/redefinir-senha/${token}`;
+    const link = `https://doacoes-ashen.vercel.app/redefinir-senha/${token}`;
 
     // Configurar o conteúdo do e-mail
     const mailOptions = {

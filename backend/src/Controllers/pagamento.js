@@ -54,13 +54,13 @@ export const criarPagamento = async (req, res) => {
                 last_name: 'Neves', // Sobrenome do comprador
             },
             back_urls: {
-                success: 'http://localhost:4005/sucesso',
-                failure: 'http://localhost:4005/falha',
-                pending: 'http://localhost:4005/pendente',
+                success: 'https://doacoes.onrender.com/sucesso',
+                failure: 'https://doacoes.onrender.com/falha',
+                pending: 'https://doacoes.onrender.com/pendente',
             },
             auto_return: 'approved',
             external_reference: novaDoacao._id.toString(), // Converte o ID da doação para string
-            notification_url: "https://241a-170-81-63-107.ngrok-free.app/notfication/webhook"
+            notification_url: "https://doacoes.onrender.com/notfication/webhook"
         };
 
         // Criando a preferência
