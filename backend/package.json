@@ -20,6 +20,6 @@
   },
   "scripts": {
     "dev": "nodemon ./src/server.js",
-     "start": "node ./src/server.js"
+     "start": "sucrase-node ./src/server.js"
   }
 }
