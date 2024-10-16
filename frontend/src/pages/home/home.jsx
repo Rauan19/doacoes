@@ -178,7 +178,7 @@ export const PageHome = () => {
                 campanhas.map((campanha) => (
                   <CampanhaCard key={campanha._id}>
                     <ImagemCampanha
-                      src={campanha.imagem ? `http://localhost:4005${campanha.imagem}` : "URL_DE_IMAGEM_PADRAO"}
+                      src={campanha.imagem ? `https://doacoes.onrender.com${campanha.imagem}` : "URL_DE_IMAGEM_PADRAO"}
                       alt={`${campanha.titulo} - Imagem principal`}
                     />
                     <TituloCampanha>{campanha.titulo}</TituloCampanha>
