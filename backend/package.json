@@ -21,7 +21,7 @@
   "scripts": {
     "build": "sucrase ./src --transforms imports --out-dir ./dist",
     "dev": "nodemon --exec sucrase-node ./src/server.js",
-     "start": "node ./src/server.js"
+     "start": "sucrase-node ./src/server.js"
   }
   
 }
