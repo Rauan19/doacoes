@@ -10,6 +10,7 @@
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.15"
   },
+  "type": "module",
   "engines": {
     "node": ">=20.0.0"
   },
@@ -23,4 +24,5 @@
     "dev": "nodemon --exec sucrase-node ./src/server.js",
      "start": "node ./src/server.js"
   }
+  
 }
