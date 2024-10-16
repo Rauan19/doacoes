@@ -19,7 +19,8 @@
     "sucrase": "^3.35.0"
   },
   "scripts": {
-    "dev": "nodemon ./src/server.js",
+    "build": "sucrase ./src --transforms imports --out-dir ./dist",
+    "dev": "nodemon --exec sucrase-node ./src/server.js",
      "start": "sucrase-node ./src/server.js"
   }
 }
