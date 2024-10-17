@@ -99,7 +99,7 @@ const MinhasCampanhas = () => {
           {minhascampanhas.length > 0 ? (
             minhascampanhas.map((campanha) => (
               <CardCampanha key={campanha._id}>
-                <ImagemCampanha src={`https://doacoes.onrender.com${campanha.imagem}`} alt={campanha.nome} />
+                <ImagemCampanha src={campanha.imagem} alt={campanha.nome} />
                 <NomeCampanha>{campanha.titulo}</NomeCampanha>
                 <h3>Meta: {formatarValor(campanha.valorMeta)}</h3>
                 <p>Arrecadado: {formatarValor(campanha.valorArrecadado)}</p>
@@ -129,7 +129,7 @@ const MinhasCampanhas = () => {
         <Modal>
           <ModalContent>
             <h2>{campanhaSelecionada.titulo}</h2>
-            <ImagemCampanha src={`https://doacoes.onrender.com${campanhaSelecionada.imagem}`} alt={campanhaSelecionada.titulo} />
+            <ImagemCampanha src={campanhaSelecionada.imagem} alt={campanhaSelecionada.titulo} />
             <p>{campanhaSelecionada.descricao}</p>
             <Button onClick={fecharModal}>Fechar</Button>
           </ModalContent>

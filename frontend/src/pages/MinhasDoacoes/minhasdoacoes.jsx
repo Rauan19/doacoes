@@ -76,7 +76,7 @@ const MinhasDoacoes = () => {
         <ContainerDoacoes>
           {doacoes.map((doacao) => (
             <CardDoacao key={doacao?._id}>
-              <ImagemDoacao src={`https://doacoes.onrender.com${doacao?.campanhaId?.imagem || ''}`} alt={doacao?.campanhaId?.titulo || 'Imagem indisponível'} />
+              <ImagemDoacao src={doacao?.campanhaId?.imagem} alt={doacao?.campanhaId?.titulo || 'Imagem indisponível'} />
               <div>
                 <h4>{doacao?.campanhaId?.titulo || 'Título indisponível'}</h4>
                 <h4 style={{ color: getStatusColor(doacao?.status) }}>Status: {doacao?.status || 'Desconhecido'}</h4>
@@ -93,7 +93,7 @@ const MinhasDoacoes = () => {
           <ModalContent>
             <CloseButton onClick={handleCloseModal}>Fechar</CloseButton>
             <h2>{doacaoSelecionada?.campanhaId?.titulo || 'Título indisponível'}</h2>
-            <ImagemDoacao src={`https://doacoes.onrender.com${doacaoSelecionada?.campanhaId?.imagem || ''}`} alt={doacaoSelecionada?.campanhaId?.titulo || 'Imagem indisponível'} />
+            <ImagemDoacao src={doacaoSelecionada?.campanhaId?.imagem || ''} alt={doacaoSelecionada?.campanhaId?.titulo || 'Imagem indisponível'} />
             <p>Descrição: {doacaoSelecionada?.campanhaId?.descricao || 'Descrição indisponível'}</p>
             <p>Email: {doacaoSelecionada?.usuarioId?.email || 'Email indisponível'}</p>
             <h3>Status: {doacaoSelecionada?.status || 'Desconhecido'}</h3>
